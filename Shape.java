@@ -1,7 +1,8 @@
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Point;
 
-public class Shape
+public class Shape implements Drawable
 {
     protected Point[] location;
     private Color color;
@@ -9,7 +10,8 @@ public class Shape
     
     public Shape(Color color, boolean filled)
     {
-        
+        this.color = color;
+        this.filled = filled;
     }
     
     public Color getColor()
@@ -25,6 +27,13 @@ public class Shape
     public Point[] getLocation()
     {
         return this.location;
+    }
+
+    @Override
+    public void draw(Graphics g)
+    {
+        
+        
     }
 
 }

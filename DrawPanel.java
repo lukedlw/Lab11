@@ -27,6 +27,7 @@ public class DrawPanel extends JPanel
     public void addShape(Shape shape)
     {
         // TODO: add the passed in shape to the list.
+        shapeList.add(shape);
     }
 
     /**
@@ -38,6 +39,11 @@ public class DrawPanel extends JPanel
     protected void paintComponent(Graphics graphics)
     {
         super.paintComponent(graphics);
+        
+        for(Shape g: shapeList)
+        {
+            g.draw(graphics);
+        }
         
         // TODO: for all shapes in the list, draw the shape.
     }
